@@ -109,7 +109,7 @@ label=0
 generator="$(ps axc --noheaders | grep ErrorGenerator)"
 if [ -n "${generator}" ] 
 then
-	label=($(cat /etc/collector/label.txt))
+	label=($(cat /tmp/label.txt))
 fi
 
 # 记录数据(覆盖)
@@ -148,7 +148,7 @@ data_post="token=${auth[0]}\
 &label=${label}
 "
 
-echo $data_post
+#echo $data_post
 
 # 向收集数据的接口提交数据
 if [ -n "$(command -v timeout)" ]

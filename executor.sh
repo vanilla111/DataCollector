@@ -2,12 +2,12 @@
 
 # 设置内存使用规则
 # vm.swappiness 当剩余物理内存低于该值时，开始使用交换区，默认60
-# echo 20 > /proc/sys/vm/swappiness
+echo 10 > /proc/sys/vm/swappiness
 
 # vm.overcommit_ratio 单个进程允许分配的虚拟空间大小(phy * ratio + swap)，默认ratio=50
 # echo 90 > /proc/sys/vm/overcommit_ratio
 
-export server_ip="192.168.55.1"
+export server_ip="192.168.1.104"
 
 # 网络接口状况
 # 获取可用的网络接口设备 如 eth0
